@@ -1,0 +1,89 @@
+
+.signin-page {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: signinBg 8s ease-in-out infinite alternate;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes signinBg {
+  0% {
+    background-image: url("../assets/Images/bg6.jpg");
+  }
+  100% {
+    background-image: url("../assets/Images/bg7.jpg");
+  }
+}
+
+
+.signin-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  padding: 26px 24px 30px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(9px);
+  border-radius: 16px;
+  color: #111;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.signin-box h1 {
+  margin-bottom: 6px;
+}
+
+.signin-sub {
+  font-size: 0.9rem;
+  margin-bottom: 18px;
+  opacity: 0.85;
+}
+
+.signin-box input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+.signin-box button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.signin-box button:hover {
+  background: #f1f1f1;
+}
+
+
+.signin-car-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: -220px;
+  animation: signinCarMove 12s linear infinite;
+}
+
+.signin-car {
+  height: 90px;
+  width: auto;
+}
+
+@keyframes signinCarMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(135vw);
+  }
+}

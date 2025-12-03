@@ -1,0 +1,63 @@
+/* Background animation */
+.features-page {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: featuresBg 8s ease-in-out infinite alternate;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes featuresBg {
+  0% {
+    background-image: url("../assets/Images/bg3.jpg");
+  }
+  100% {
+    background-image: url("../assets/Images/bg4.jpg");
+  }
+}
+
+.features-overlay {
+  position: absolute;
+  top: 26%;
+  right: 10%;
+  max-width: 380px;
+  color: #ffffff;
+}
+
+.features-overlay h1 {
+  font-size: 2.4rem;
+  margin-bottom: 14px;
+}
+
+.features-overlay ul {
+  list-style: none;
+}
+
+.features-overlay li {
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+/* Bike bottom */
+.features-bike-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: -200px;
+  animation: featuresBikeMove 12s linear infinite;
+}
+
+.features-bike {
+  height: 80px;
+  width: auto;
+}
+
+@keyframes featuresBikeMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(135vw);
+  }
+}

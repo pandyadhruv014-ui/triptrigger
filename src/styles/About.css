@@ -1,0 +1,58 @@
+/* background animation (use any 2 bgs) */
+.about-page {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: aboutBg 8s ease-in-out infinite alternate;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes aboutBg {
+  0% {
+    background-image: url("../assets/Images/bg2.jpg");
+  }
+  100% {
+    background-image: url("../assets/Images/bg3.jpg");
+  }
+}
+
+/* Content box */
+.about-overlay {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  max-width: 480px;
+  color: #ffffff;
+}
+
+.about-overlay h1 {
+  font-size: 2.4rem;
+  margin-bottom: 14px;
+}
+
+.about-overlay p {
+  font-size: 1.1rem;
+}
+
+/* bus bottom */
+.about-bus-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: -240px;
+  animation: aboutBusMove 14s linear infinite;
+}
+
+.about-bus {
+  height: 90px;
+}
+
+@keyframes aboutBusMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(140vw);
+  }
+}
