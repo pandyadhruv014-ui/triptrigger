@@ -1,58 +1,59 @@
-/* background animation (use any 2 bgs) */
 .about-page {
   height: 100vh;
-  width: 100%;
   background-size: cover;
   background-position: center;
-  animation: aboutBg 8s ease-in-out infinite alternate;
+  animation: aboutBG 8s infinite alternate;
+  margin-top: 80px;
   position: relative;
-  overflow: hidden;
+  padding: 40px;
 }
 
-@keyframes aboutBg {
-  0% {
-    background-image: url("../assets/Images/bg2.jpg");
-  }
-  100% {
-    background-image: url("../assets/Images/bg3.jpg");
-  }
+@keyframes aboutBG {
+  0% { background-image: url("../assets/Images/bg3.jpg"); }
+  100% { background-image: url("../assets/Images/bg4.jpg"); }
 }
 
-/* Content box */
-.about-overlay {
-  position: absolute;
-  top: 25%;
-  left: 10%;
-  max-width: 480px;
-  color: #ffffff;
+.about-container {
+  max-width: 700px;
+  color: white;
 }
 
-.about-overlay h1 {
-  font-size: 2.4rem;
-  margin-bottom: 14px;
+.about-container h1 {
+  font-size: 3rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 10px;
 }
 
-.about-overlay p {
-  font-size: 1.1rem;
+.about-container h2 {
+  margin-top: 20px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-family: "Playfair Display";
 }
 
-/* bus bottom */
-.about-bus-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: -240px;
-  animation: aboutBusMove 14s linear infinite;
+.about-container p, ul li {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-family: "Georgia", serif;
+  margin-bottom: 10px;
 }
 
+.about-container .quote {
+  margin-top: 20px;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Animated bus */
 .about-bus {
-  height: 90px;
+  position: absolute;
+  bottom: 20px;
+  left: -200px;
+  height: 120px;
+  animation: busDrive 10s linear infinite;
 }
 
-@keyframes aboutBusMove {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(140vw);
-  }
+@keyframes busDrive {
+  0% { transform: translateX(-200px); }
+  100% { transform: translateX(1400px); }
 }
